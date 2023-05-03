@@ -1,10 +1,22 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Head from "next/head"
+import styles from "../styles/Home.module.css"
+import {type NextPage } from 'next'
+import Board from "@/containers/Board"
 
-const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const Home:NextPage=()=> {
   return (
-<>Hello</>
+<div className={styles.container}>
+  <Head>
+    <title>Tic tac toe</title>
+    <meta name="description" content="Tic tac toe game built wiith Next.js"/>
+    <link rel="icon" href="/favicon.ico" />
+  </Head>
+  <main className={styles.main}>
+    <Board/>
+  </main>
+</div>
   )
 }
+
+export default Home
