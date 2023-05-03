@@ -42,7 +42,7 @@ const Board = () => {
     if(w){
       setWinner(w)
     }
-    const filteredSquare=squares.filter((square)=>!square.length)
+    const filteredSquare=squares.filter((square)=>!square).length
     if (!w && !filteredSquare) {
       setWinner("BOTH")
     }
