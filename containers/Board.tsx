@@ -12,8 +12,9 @@ for(let i= 0;i<lines.length;i++){
     if(squares[a] && squares[a] === squares[b] && squares[a] === squares[c]){
       return squares[a]
     }
-    return null
-}}
+ 
+}   
+return null}
 
 const Board = () => {
   const [squares,setSquares]=useState(Array(9).fill(null))
